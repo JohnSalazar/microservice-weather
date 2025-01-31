@@ -131,7 +131,7 @@ public class WeatherReportAggregator : IWeatherReportAggregator
     var tempServiceProtocol = _weatherDataConfig.TempDataProtocol;
     var tempServiceHost = _weatherDataConfig.TempDataHost;
     var tempServicePort = _weatherDataConfig.TempDataPort;
-    return $"${tempServiceProtocol}://{tempServiceHost}:{tempServicePort}/observation/{zip}?days={days}";
+    return $"{tempServiceProtocol}://{tempServiceHost}:{tempServicePort}/observation/{zip}?days={days}";
   }
 
   private string BuildPrecipitationServiceEndPoint(string zip, int days)
@@ -139,6 +139,6 @@ public class WeatherReportAggregator : IWeatherReportAggregator
     var precipServiceProtocol = _weatherDataConfig.PrecipDataProtocol;
     var precipServiceHost = _weatherDataConfig.PrecipDataHost;
     var precipServicePort = _weatherDataConfig.PrecipDataPort;
-    return $"${precipServiceProtocol}://{precipServiceHost}:{precipServicePort}/observation/{zip}?days={days}";
+    return $"{precipServiceProtocol}://{precipServiceHost}:{precipServicePort}/observation/{zip}?days={days}";
   }
 }
